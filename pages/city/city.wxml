@@ -1,0 +1,221 @@
+
+<!-- <view wx:for='{{cityBox}}'>
+<navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+{{item.name}}{{item.city_id}}
+</navigator>
+</view> -->
+
+
+<view class="container-inner">
+  
+  <view class="container">
+
+    <block wx:if="{{isShowLetter}}">
+      <view class="showSlectedLetter">
+        {{toastShowLetter}}
+      </view>
+    </block>
+
+
+    <scroll-view scroll-y="true" style="height:{{winHeight}}px" bindscroll="bindScroll" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}">
+
+
+      <ul class="ul">
+        <li wx:for="{{completeList}}" wx:key="*this" bindtap="bindCity" data-city="{{item.city}}" data-code="{{item.code}}" class="li">{{item.city}}</li>
+      </ul>
+
+
+    
+
+      <view class="selectCity">
+    
+        <!-- <view class="hotcity-common"  data-city="{{city}}">定位城市</view>
+        
+          <navigator url="/pages/index/index?id={{currentCityCode}}"open-type='reLaunch'>
+        <view class="thisCityName" data-city="{{city}}" data-code="{{currentCityCode}}">{{city}}</view>
+</navigator> -->
+
+ <view class="hotcity-common">热门城市</view>
+        <view class="weui-grids" >
+        <block wx:for="{{hotcityList1}}" wx:key=''>
+       
+          <view class="weui-grid" data-id="{{item.cityCode}}" data-city="{{item.city}}" bindtap="bindCity">
+           <navigator url="/pages/index/index?id={{item.cityCode}}" open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.city}}</view>
+             </navigator>
+          </view>
+         
+          </block>
+        </view>
+        <view class="weui-grids" >
+          <block wx:for="{{hotcityList2}}" wx:key=''>
+           
+          <view class="weui-grid" data-id="{item.cityCode}}" data-city="{{item.city}}" bindtap="bindCity">
+           <navigator  url="/pages/index/index?id={{item.cityCode}}" open-type='reLaunch' >
+            <view class="weui-grid__label">{{item.city}}</view>
+             </navigator>
+          </view>
+         
+       </block>
+        </view>
+       
+        
+      
+
+
+        <view class="hotcity-common">省份/城市</view>
+        <view class="item_letter" >A</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBox}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+              <view class="item_letter" >B</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxB}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+              <view class="item_letter" >C</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxC}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+              <view class="item_letter" >F</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxF}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+
+              <view class="item_letter" >G</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxG}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+              <view class="item_letter" >H</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxH}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+
+              <view class="item_letter" >J</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxJ}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+
+              <view class="item_letter" >L</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxL}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+
+              <view class="item_letter" >N</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxN}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+
+              <view class="item_letter" >Q</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxQ}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+
+
+              <view class="item_letter" >S</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxS}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+
+              <view class="item_letter" >T</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxT}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+
+              <view class="item_letter" >X</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxX}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+              <view class="item_letter" >Y</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxY}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+
+              <view class="item_letter" >Z</view>
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for='{{cityBoxZ}}' wx:key='' data-id="{{item.city_id}}" data-city="{{item.name}}" bindtap="bindCity">
+          <navigator url='/pages/index/index?id={{item.city_id}}' open-type='reLaunch'>
+            <view class="weui-grid__label">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+
+      </view>
+     
+        
+         
+
+
+    </scroll-view>
+
+  </view>
+</view>

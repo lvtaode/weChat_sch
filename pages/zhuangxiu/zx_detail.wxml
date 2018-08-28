@@ -1,0 +1,43 @@
+
+<loading hidden="{{hidden}}" bindchange="loadingChange">正在加载中...</loading>
+
+<view class="zx_detail">
+<image  style="height:400rpx;width:100%;" src="{{'http://www.chinascw.net/attachs/'+detail.photo}}"/>
+<view class="zx_detail_pro">
+{{detail.shop_name}}
+</view>
+
+ <view class="zx_intro_title">
+ <image style="width:24rpx;height:24rpx;" src="http://www.chinascw.net/public/images/cs_intro.png"/> 公司简介
+ </view>
+ <view class="zx_intro_con"> 
+{{detail.details}}
+ </view>
+ <view class="bgc">
+ </view>
+ <view class="zx_contact">
+ <view class="zx_left">
+ <image style="vertical-align:middle;margin-right:10rpx;height:30rpx;width:2rpx;" src="http://www.chinascw.net/public/images/cs-line.png"/>联系人:
+ </view>
+ <view class="zx_right">
+ {{detail.contact}}
+ </view>
+</view>
+ <view class="zx_contact">
+ <view class="zx_left">
+ <image style="vertical-align:middle;margin-right:10rpx;height:30rpx;width:2rpx;" src="http://www.chinascw.net/public/images/cs-line.png"/>联系人方式:
+ </view>
+ <view class="zx_right">
+<image style="vertical-align:middle;margin-right:10rpx;width:24rpx;height:24rpx;" src="http://www.chinascw.net/public/images/cs-iphone.png"/> {{detail.tel}}
+ </view>
+</view>
+
+<view class="zx_contact">
+ <view class="zx_left" style="width:30%;">
+ <image style="vertical-align:middle;margin-right:10rpx;height:30rpx;width:2rpx;" src="http://www.chinascw.net/public/images/cs-line.png"/>公司地址:
+ </view>
+ <view class="zx_right" style="width:70%;font-size:0.7rem;">
+ {{detail.addr}}
+ </view>
+</view>
+</view>

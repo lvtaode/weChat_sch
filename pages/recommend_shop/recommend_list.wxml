@@ -1,0 +1,61 @@
+
+ <view class="phone_one" bindtap="clickPerson" >
+ <view class="phone_personal">{{firstPerson}}</view>
+ <image src="http://www.chinascw.net/themes/default/Mobile/statics/img/icon-down.png" class="personal_image {{selectArea ? 'rotateRight' :''}}"></image> 
+ </view>
+  
+<view class="person_box" >
+  <view class="phone_select" hidden="{{selectPerson}}" >
+  <view wx:for="{{areas}}" class="select_one" bindtap="mySelect" data-me="{{item.area_name}}" data-cateId="{{item.area_id}}">{{item.area_name}}</view>
+ </view>
+ </view>
+
+<view class="phone_one" bindtap="clickPerson1" >
+ <view class="phone_personal">{{stoneCity}}</view>
+ <image src="http://www.chinascw.net/themes/default/Mobile/statics/img/icon-down.png" class="personal_image {{selectArea1 ? 'rotateRight' :''}}"></image> 
+ </view>
+  
+<view class="person_box" >
+  <view class="phone_select" hidden="{{selectPerson1}}" >
+  <view wx:for="{{businessList}}" class="select_one" bindtap="mySelect1" data-me="{{item.business_name}}" data-bussinesId="{{item.business_id}}" data-areaId="{{item.area_id}}" >{{item.business_name}}</view>
+ </view>
+ </view>
+<loading hidden="{{hidden}}" bindchange="loadingChange">正在加载中...</loading>
+<!--列表栏  -->
+ <scroll-view class="page_list" scroll-y="true" 
+style="height:100vh;display: -webkit-flex; flex-direction: column;   " bindscrolltolower="lower1" lower-threshold="50"  
+>
+
+<block wx:for="{{shopLists}}">
+<navigator url='/pages/shop/shop?shop_id={{item.shop_id}}&city_id={{city_id}}'>
+<view class='recommend_list' >
+<view class='recommend_img'>
+ <image src="{{'http://www.chinascw.net/attachs/'+item.photo}}" />
+</view>
+<view class='recommend_content'>
+
+  <view class='recommend_title'>
+    {{item.shop_name}}
+  </view>
+   <view class='recommend_adr'>
+      <view class='recommend_left'>
+      {{item.addr}}
+      </view>
+      <view class='recommend_right'>
+      <view class='tjqy' hidden="tuijian">推荐企业</view>
+      </view>
+  </view> 
+   <view class='recommend_intro'>
+ {{item.shop_name}}
+  </view> 
+</view>
+</view>
+<view class="bgc">
+</view>
+</navigator>
+
+</block>
+
+</scroll-view>
+ <view hidden="{{zhezhao2}}" style="height:100vh;width:100%; position: absolute;left:0;top:0;margin-top:100rpx;text-align:center;background:#fff;">亲，没有此地区商户
+      </view>

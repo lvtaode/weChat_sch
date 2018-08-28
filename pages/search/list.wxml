@@ -1,0 +1,27 @@
+<!--pages/search/search_list.wxml-->
+<view class="box">
+           <navigator wx:for="{{shop}}" wx:key="1"  url="/pages/bannerShop/bannerShop?orderby={{item.shop_id}}"> 
+            <view class="item">
+                  <text class='title'>商家</text>
+                  <image src="{{'http://www.chinascw.net/attachs/'+item.photo}}"/>
+                  <view class="shop_name">
+                        {{item.shop_name}}
+                  </view>
+            </view>
+           </navigator>
+ </view>
+<view class="box">
+           <navigator wx:for="{{goods}}" wx:key="1"  url="/pages/localStoneDetail/localStoneDetail?goods_id={{item.goods_id}}"> 
+            <view class="item">
+                  <text class='title' style='background-color:#E8C631'>商品</text>
+                  <image src="{{'http://www.chinascw.net/attachs/'+item.photo}}"/>
+                  <view>
+                        {{item.title}}
+                  </view>
+            </view>
+           </navigator>
+ </view>
+
+  <view class='empty' hidden='{{choice}}'>
+        <text>抱歉,未查找到您要搜索的内容</text>
+ </view> 

@@ -1,0 +1,57 @@
+
+page{
+  font-size:35rpx;
+}
+form{
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
+view{
+  margin-bottom: 20rpx;
+}
+.title{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+   font-size:28rpx;
+  color:red;
+  background-color: #F5F5F5;
+  padding-left: 40rpx;
+  margin-bottom:20px;
+  box-sizing: border-box;
+}
+
+.right_content{
+  margin-right:40rpx;
+  width: 320rpx; 
+  text-align: center;
+  float: right;
+}
+.photo_demo{
+  width: 320rpx;
+  height: 190rpx;
+  text-align: center;
+  padding-top:3rpx; 
+  box-sizing: border-box;
+  border: 1px solid #1da291;
+}
+button{
+    border-color: #fff;
+    background-color: #1da291;
+    color: white;
+    width: 180rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 15rpx;
+    outline: none;
+    border-image: none;
+    border-style: none;
+    font-size: 30rpx;
+}
+.explain{
+  font-size: 25rpx;
+  color:#938f8f;
+  display: inline-block;
+  line-height: 60rpx;
+}

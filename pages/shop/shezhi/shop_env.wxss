@@ -1,0 +1,88 @@
+/* pages/shop/shezhi/shop_env.wxss */
+page{
+  font-size:30rpx; 
+}
+.title{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+   font-size:25rpx;
+  color:red;
+  background-color: #F5F5F5;
+  padding-left: 50rpx;
+  margin-bottom:10px;
+  box-sizing: border-box;
+}
+.container{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom:30rpx; 
+}
+.container .pic{
+  width: 50%;
+  height: 220rpx;
+  box-sizing: border-box;
+  padding-top:9rpx; 
+  text-align: center;
+  border:1px solid #1da291;
+}
+.content{
+  width: 45%;
+   height: 220rpx;
+  font-size:26rpx;
+  color:#6b6a6a;
+}
+.content text{
+  display: block;
+  margin-top: 10rpx;
+}
+.btn button{
+   border-color: #fff;
+    background-color: grey;
+    color: white;
+    width: 45%;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin-top:120rpx; 
+    display: inline-block;
+    border-radius: 10rpx;
+    outline: none;
+    border-image: none;
+    border-style: none;
+    font-size: 25rpx;
+}
+.foot{
+  text-align: center;
+  height: 400rpx;
+  background-color: #F5F5F5;
+  margin-top: 60rpx;
+}
+.foot view{
+  display: inline-block;
+   margin: 50rpx 0; 
+  /* margin: 40rpx 0; */
+}
+.add_btn{
+   border-color: #fff;
+    background-color: #1da291;
+    color: white;
+    width: 300rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    border-radius: 10rpx;
+    outline: none;
+    border-image: none;
+    border-style: none;
+    font-size: 25rpx;
+}
+.box{
+  width: 95%;
+  margin: 0 auto;
+  border:3px solid #ddd;
+  height:200px;
+  line-height:200px;
+  border-radius: 10px;
+  text-align: center;
+}

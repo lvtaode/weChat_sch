@@ -1,0 +1,366 @@
+<!--index.wxml-->
+<!-- <view class='service'>
+    <button open-type="contact" session-from="weapp">
+      <image  src="/images/we_chat.png"  style='width:60rpx;height:60rpx'></image>
+       在线客服
+    </button> 
+</view> -->
+<view class="container">
+ <!--搜索框  -->
+<view class="search-view"  >
+    <view class='search_left'>
+     <navigator class="location"  url="/pages/city/city"  >
+     
+      <image style="width:22%;height:85%;vertical-align:baseline" src="../../images/location.png" data-id="{{city_id2}}"/> 
+     {{location }}
+     </navigator>
+    </view>
+    <!--搜索框  -->
+      <view class='search_box'>
+          <icon size='15' type='search' class='search-img'></icon>
+          <input class='search' placeholder='请输入名称' value="{{searchValue}}" bindinput='searchValueInput'></input>
+          <text class='sousuo' bindtap='search'>搜索</text>
+      </view>  
+
+
+     <view class='search_right'>
+          <view style='text-align:center'>全国热线：</view>
+        <text bindtap="call" data-tel="4009009633" style='color:#DE1212'>400-900-9633</text>
+     </view>
+  </view>
+  <view class="swiper-container">
+        <swiper class="swiper_box " 
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+            <block wx:for="{{banner}}" wx:key="">
+            <navigator url='/pages/bannerShop/bannerShop?orderby={{item.orderby}}'>
+                <swiper-item >
+                    <image src="{{'http://www.chinascw.net/attachs/'+item.photo}}" class="slide-image" width="750rpx" height="562.5rpx"/>
+                </swiper-item>
+                </navigator>
+            </block>
+        </swiper>
+   </view>
+
+  
+  <!--小广告图  -->
+    
+    <view class='title'> <view class='line_red'></view> 年度热门商铺</view>
+    <!-- <view class="swiper-container2">
+        <swiper class="swiper_box1" 
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+            <block wx:for="{{banner1}}" wx:key="">
+            <navigator url='/pages/bannerShop/bannerShop?orderby={{item.orderby}}' >
+                 <swiper-item> 
+                    <image bindtap="tapBanner" src="{{'http://www.chinascw.net/attachs/'+item.photo}}" class="slide-image" />
+                 </swiper-item> 
+                </navigator>
+             </block> 
+        </swiper>
+   </view>    -->
+   <block >
+        <view class="swiper-container2" style='width:720rpx;margin-bottom:0px;z-index:10'>
+        <swiper class="swiper_box2"  
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+            <block wx:for="{{banner1}}" wx:key="">
+              <navigator url='/pages/bannerShop/bannerShop?orderby={{item.orderby}}'>
+                <swiper-item>
+                      <!-- <image bindtap="tapBanner" src="{{'http://www.chinascw.net/attachs/'+item.photo}}" class="slide-image" />  -->
+                      <view bindtap="tapBanner" class="bgImg" style="background-image:url('http://www.chinascw.net/attachs/{{item.photo}}');background-size:97% 100%;">
+                      </view>
+                </swiper-item>
+                
+                </navigator>
+            </block>
+        </swiper>
+   </view> 
+      <view class="swiper-container2" style='width:720rpx;margin-top:20px;z-index:10'>
+        <swiper class="swiper_box2"  
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+            <block wx:for="{{banner2}}" wx:key="">
+              <navigator url='/pages/bannerShop/bannerShop?orderby={{item.orderby}}'>
+                <swiper-item>
+                     
+                      <view bindtap="tapBanner" class="bgImg" style="background-image:url('http://www.chinascw.net/attachs/{{item.photo}}');background-size:97% 100%;">
+                      </view>
+                </swiper-item>
+                
+                </navigator>
+            </block>
+        </swiper>
+   </view>  
+   </block>
+
+   <!--导航栏  -->
+   
+     <view class='nav'>
+    <view class=' flex-wrp'>
+    <view></view>
+ <view class='nav-box' data-id='{{city_id2}}'>
+     <navigator  url="/pages/recommend_shop/recommend_list?id={{city_id2}}" style="height:100rpx;" >
+     <image src="http://www.chinascw.net/attachs/2018/01/05/5a4ed547794bf.png"/>
+      </navigator>
+     <view style='font-size:0.8rem;color:#777;text-align:center;'>推荐商家</view>
+     </view>
+ <view class='nav-box' >
+     <navigator url='/pages/gonggouTab/gonggouTb' style="height:100rpx;"  >
+     <image src="http://www.chinascw.net/attachs/2018/01/05/5a4ed534b2756.png"/>
+      </navigator >
+     <view style='font-size:0.8rem;color:#777;text-align:center;'>供购信息</view>
+     </view>
+
+      <view class='nav-box' >
+     <navigator url='/pages/localStone/localStone?city_id={{city_id2}}' style="height:100rpx;;">
+     <image src="http://www.chinascw.net/attachs/2017/11/20/5a123fc2c6071.png"/>
+      </navigator>
+     <view style='font-size:0.8rem;color:#777;text-align:center;'>本地石材</view>
+     </view>
+ 
+       <view class='nav-box' >
+     <navigator url="/pages/zx_detail/zx" style="height:100rpx;">
+     <image src="http://www.chinascw.net/attachs/2018/02/01/5a7271867d5d9.png"/>
+      </navigator>
+     <view style='font-size:0.8rem;color:#777;text-align:center;'>行业新闻</view>
+     </view>
+
+      <view class='nav-box' >
+     <navigator url='/pages/background/background' style="height:100rpx;;">
+     <image src="http://www.chinascw.net/attachs/2018/01/24/5a684b708a228.png"/>
+      </navigator>
+     <view style='font-size:0.8rem;color:#777;position:relative;right:100rpx;width:320rpx;'>石材背景墙</view>
+     </view>
+
+   <view class='nav-box' >
+     <navigator url='/pages/kqcj/kqcj' style="height:100rpx;;">
+     <image src="http://www.chinascw.net/attachs/2018/01/20/5a62ed52a9281.png"/>
+      </navigator>
+     <view style='font-size:0.8rem;color:#777;text-align:center;'>矿区厂家</view>
+     </view>
+     <view class='nav-box' >
+     <navigator url='/pages/wuliu/wl?id={{city_id2}}' style="height:100rpx;;">
+     <image src="http://www.chinascw.net/attachs/2017/11/20/5a123fee5b5a2.png"/>
+      </navigator>
+     <view style='font-size:0.8rem;color:#777;text-align:center;'>全国物流</view>
+     </view>
+    </view>
+   
+     <view class='nav-box' >
+     <navigator url='/pages/zhuangxiu/zx?id={{city_id2}}' style="height:100rpx;;">
+     <image src=" http://www.chinascw.net/attachs/2018/03/22/5ab317cb6321a.png"/>
+      </navigator>
+     <view style='font-size:0.8rem;color:#777;text-align:center;'>装修公司</view>
+     </view>
+
+     <view class='nav-box' >
+     <navigator url='/pages/tools/tools_list?id={{city_id2}}' style="height:100rpx;;">
+     <image src=" http://www.chinascw.net/attachs/2018/05/15/5afa3f86a2efc.png"/>
+      </navigator>
+     <view style='font-size:0.8rem;color:#777;text-align:center;'>辅料工具</view>
+     </view>
+
+     <view class='nav-box' >
+     <navigator url="/pages/job/select" style="height:100rpx;;">
+     <image src=" http://www.chinascw.net/attachs/2018/03/28/5abb34bb0e4b9.png"/>
+      </navigator>
+     <view style='font-size:0.8rem;color:#777;text-align:center;'>招聘求职</view>
+     </view>
+   
+    </view> 
+
+    <!--公告栏  -->
+     <view  class="notice">
+      <view class="notice_iteml">头条：</view>
+      <swiper  class="notice_swiper" vertical="true" autoplay="true" circular="true" interval="3000">
+      <block wx:for="{{toutiao}}" wx:key="">
+        <navigator url="/pages/toutiao/tt?id={{item.id}}">
+          <swiper-item >
+            <view class="notice_itemr">{{item.title}}</view>
+          </swiper-item>
+        </navigator>
+        </block>
+      </swiper>
+      <view>
+       <navigator url="/pages/toutiao/tt_list"style='font-size:0.8rem;padding-right:10rpx;color:#666;'>更多</navigator> 
+      </view>
+    </view>
+
+    <!--三行广告栏  -->
+    <view class='title'> <view class='line_red'></view> 新进实力商铺</view>
+    
+     <view class="swiper-container3" style='width:715rpx;'>
+        <swiper class="swiper_box2"  
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+            <block wx:for="{{banner3}}" wx:key="">
+              <navigator url='/pages/bannerShop/bannerShop?orderby={{item.orderby}}'>
+                <swiper-item>
+                     <view bindtap="tapBanner" class="bgImg" style="background-image:url('http://www.chinascw.net/attachs/{{item.photo}}')">
+                        <text>{{item.areaName}}石材</text>
+                     </view> 
+                </swiper-item>
+                
+                </navigator>
+            </block>
+        </swiper>
+   </view>  
+     <view class="swiper-container3" style='width:715rpx;'>
+        <swiper class="swiper_box2"  
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+            <block wx:for="{{banner4}}" wx:key="">
+              <navigator url='/pages/bannerShop/bannerShop?orderby={{item.orderby}}'>
+                <swiper-item>
+                     <view bindtap="tapBanner" class="bgImg" style="background-image:url('http://www.chinascw.net/attachs/{{item.photo}}')">
+                        <text>{{item.areaName}}石材</text>
+                     </view> 
+                </swiper-item>
+                
+                </navigator>
+            </block>
+        </swiper>
+   </view>
+     <view class="swiper-container3" style='width:715rpx;'>
+        <swiper class="swiper_box2"  
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+            <block wx:for="{{banner5}}" wx:key="">
+              <navigator url='/pages/bannerShop/bannerShop?orderby={{item.orderby}}'>
+                <swiper-item>
+                     <view bindtap="tapBanner" class="bgImg" style="background-image:url('http://www.chinascw.net/attachs/{{item.photo}}')">
+                        <text>{{item.areaName}}石材</text>
+                     </view> 
+                </swiper-item>
+                
+                </navigator>
+            </block>
+        </swiper>
+   </view>
+   <!-- <view class="swiper-container3" style='width:715rpx;'>
+        <swiper class="swiper_box2" 
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" >
+            <block wx:for="{{banner4}}" >
+              <navigator url='/pages/bannerShop/bannerShop?orderby={{item.orderby}}'>
+                <swiper-item style='width:100px;height:50px;display:inline-block;'>
+                
+                    <image bindtap="tapBanner" src="{{'http://www.chinascw.net/attachs/'+item.photo}}" class="slide-image" width="750rpx" height="562.5rpx"/>
+                </swiper-item>
+                </navigator>
+            </block>
+        </swiper>
+   </view>
+    <view class="swiper-container3" style='width:715rpx;'>
+        <swiper class="swiper_box2" 
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+            <block wx:for="{{banner5}}" >
+              <navigator url='/pages/bannerShop/bannerShop?orderby={{item.orderby}}'>
+                <swiper-item style='width:100px;height:50px;display:inline-block;'>
+                    <image bindtap="tapBanner" src="{{'http://www.chinascw.net/attachs/'+item.photo}}" class="slide-image" width="750rpx" height="562.5rpx"/>
+                </swiper-item>
+                </navigator>
+            </block>
+        </swiper>
+   </view> -->
+   
+  
+   <!--石材种类  -->
+     <view class='title' style='margin-top:16rpx;'> <view class='line_red'></view> 石材种类</view>
+      <view class='nav2 ' style='margin:0 auto;width:90%;height:512rpx;'>
+    <view class=' flex-wrp' style='flex-direction:row;'>
+     <view class='nav-box2' wx:for="{{nav2}}" wx:key="">
+      <navigator url='/pages/scKind/scKind?city_id={{city_id2}}&cate_id={{item.cate_id}}' style="height:100rpx;"> 
+     <image style='width:50%;height:78%; 'src='{{item.url}}'/>
+    
+     <view style='font-size:0.8rem;color:#777; text-align:center;line-height:0.6rem;'>{{item.cate_name}}</view>
+      </navigator> 
+     </view>
+    
+    </view>
+    </view>    
+    <!--新闻资讯  -->
+    <view class='title'> <view class='line_red'></view> 新闻资讯   
+     <navigator url="/pages/zx_detail/zx" style='display:inline-block;margin-left:400rpx; color:#666;'>更多>></navigator> 
+    </view>
+    <view class='news_information'>
+    <view class='news_left'>
+      <view class="swiper-container4">
+        <swiper class="swiper_box4" 
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" >
+            <block wx:for="{{zixun}}" wx:key="">
+            <navigator url="/pages/zx_detail/zx_detail?article_id={{item.article_id}}">
+                <swiper-item >
+                    <image style="height:86%;" bindtap="tapBanner" src="{{'http://www.chinascw.net/attachs/'+item.photo}}" class="slide-image" width="750rpx" height="562.5rpx"/>
+                    <view class='news_content'>{{item.title}}</view>
+                </swiper-item>
+                </navigator>
+            </block>
+        </swiper>
+         
+   </view>
+    </view>
+    <view class='news_right'>
+    <block wx:for="{{zixun}}" wx:key="">
+    <navigator url="/pages/zx_detail/zx_detail?article_id={{item.article_id}}">
+    <view class='news_list'>
+    <text style='font-size:0.9rem;color:#FFc540;'> {{item.title}}</text>   
+   <text style='font-size:0.7rem;color:#666;'> {{item.details}}</text>   
+   <text style='font-size:0.6rem;color:#ddd;text-align:right;'> {{item.create_time}}</text>    
+    </view>
+    </navigator>
+    </block>
+    </view>
+    </view>
+    <!--大理石展示  -->
+  <view style='background-color:#EDF7F8;padding-bottom:10px'>
+      <!-- 标题 -->
+      <view class='top-title'> 
+          <image src="http://www.chinascw.net/themes/default/Mobile/statics/img/sczl_2.png"></image>
+          大理石展示
+          <image src="http://www.chinascw.net/themes/default/Mobile/statics/img/sczl_2.png"></image>
+      </view>
+      <!--展示内容  -->
+        <view class="box">
+          <navigator wx:for="{{showdali}}" wx:key=""  url="/pages/localStoneDetail/localStoneDetail?goods_id={{item.goods_id}}">
+              <view class="item">
+                <image src="{{'http://www.chinascw.net/attachs/'+item.photo}}"/>
+                <view>
+                      {{item.title}}
+                </view>
+          </view>
+          </navigator>
+        </view>
+        
+</view>
+
+
+     <view style='background-color:#EDF7F8;padding-bottom:10px'>
+      <!-- 标题 -->
+      <view class='top-title'> 
+          <image src="http://www.chinascw.net/themes/default/Mobile/statics/img/sczl_2.png"></image>
+          花岗岩展示
+          <image src="http://www.chinascw.net/themes/default/Mobile/statics/img/sczl_2.png"></image>
+      </view>
+      <!--展示内容  -->
+        <view class="box">
+          <navigator wx:for="{{showHua}}" wx:key=""  url="/pages/localStoneDetail/localStoneDetail?goods_id={{item.goods_id}}">
+              <view class="item">
+                <image src="{{'http://www.chinascw.net/attachs/'+item.photo}}"/>
+                <view>
+                      {{item.title}}
+                </view>
+          </view>
+          </navigator>
+        </view>
+</view>
+    <!--商家咨询  -->
+ <view class='title' style='margin-bottom:26rpx;'> <view class='line_red'></view> 商家资讯</view>
+<view class="shop_information">
+<block wx:for="{{shopZx}}" wx:key="">
+
+<view class='shop_list'>
+<navigator url='/pages/shop/shop?shop_id={{item.shop_id}}&city_id={{city_id}}'>
+<image src="{{'http://www.chinascw.net/attachs/'+item.photo}}"/> <text>{{item.shop_name}}</text>
+</navigator>
+</view>
+
+</block>
+
+</view>
+  
+   <!--最外边盒子  -->
+   </view>

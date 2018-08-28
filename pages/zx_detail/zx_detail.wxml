@@ -1,0 +1,20 @@
+
+
+<view class="gg_detail">
+ <view class="gg_detail_title">{{details.title}}</view>
+ <view class="dd_detail_time">
+发布日期:{{details.create_time}}
+</view>
+<view class="zx_img">
+<image src="{{'http://www.chinascw.net/attachs/'+details.photo}}" style="width:80%;"/>
+</view>
+<view class="dd-detail_information">
+{{details.details}}
+
+</view>
+</view>
+
+<view class='pagesize'>
+  <button size='mini' bindtap='prev' disabled='{{id>=count}}'>上一页</button>
+  <button disabled='{{true}}' size='mini' bindtap='next'  disabled='{{id<=1}}'>下一页</button>
+</view>

@@ -1,0 +1,54 @@
+@import  '/pages/shop/shop.wxss';
+image{
+  height: 260rpx;
+}
+.phone_personal{
+  width: 100%;
+  color:rgb(34, 154, 181);
+  height:100rpx;
+  line-height:100rpx;
+  text-align: center;
+ 
+}
+.phone_one{
+  display: flex; 
+  position: relative;
+  justify-content: space-between;
+  background-color:#fff;
+  width:100%;
+  height:100rpx;
+  margin:0 auto;
+  border-radius: 10rpx;
+  border-bottom:2rpx solid rgb(255, 255, 255);
+  font-size:0.8rem;
+}
+.person_box{
+  position: relative;
+}
+.phone_select{
+  margin-top:0;
+  z-index: 100;
+  position: absolute; 
+}
+.select_one{
+  text-align: center;
+  background: #fff;
+  width:676rpx;  
+  line-height:100rpx;
+  margin:0 5%;
+  border-bottom:2rpx solid #ddd;
+  font-size:0.8rem;
+}
+.personal_image{
+  z-index: 100;
+  position: absolute;
+  right:2.5%;
+  width: 34rpx;
+  height: 20rpx;
+  margin:40rpx 20rpx 40rpx 0;
+  transition: All 0.4s ease; 
+  -webkit-transition: All 0.4s ease;
+}
+.rotateRight{
+  transform: rotate(180deg); 
+}

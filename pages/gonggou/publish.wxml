@@ -1,0 +1,38 @@
+<form bindsubmit='formSubmit'>
+    <view>
+        请输入您的标题:
+        <input type='text' name="title" placeholder='请输入标题(审核后展示)'></input>
+    </view>
+    
+      <radio-group  style='text-align:center;color:#585151;' name="f_choose">
+          <label style='margin-right:25px'>
+                <radio value="1"
+                ></radio> 
+                求购        
+            </label>  
+            <label>
+              <radio value="0"></radio>  
+              供应
+          </label>  
+      </radio-group>     
+    <view>
+        请输入您的信息:
+        <textarea name="details" placeholder='有什么信息,说说看(审核后展示)' class="txt">
+        </textarea> 
+    </view>
+    <view>
+        联系人:
+        <input type='text' placeholder='联系人' name="mans"></input>
+    </view>
+    <view>
+        电话:
+        <input placeholder='电话' name="tel" bindblur='reg'></input>
+    </view>
+    <view class='upload' bindtap='uploadImg'>
+         <image src="http://www.chinascw.net/themes/default/Mobile/statics/img/upload.png" style='width:40rpx;height:40rpx;vertical-align:middle'></image>          上传图片
+    </view>
+    <view class='imgList'  wx:for="{{tempFilePaths}}" wx:key="{{tempFilePaths}}">
+        <image src="{{item}}"  style='width:100rpx;height:100rpx'></image>
+    </view>
+    <button type='primary' form-type='submit' style=' background-color: #2fbdaa;'>发布</button>
+</form>

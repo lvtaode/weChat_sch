@@ -1,0 +1,6 @@
+
+
+<form bindsubmit="formSubmit">
+   <input name="nickname" maxlength='40' type="text" style="height:80rpx;line-height:80rpx; box-sizing: border-box;padding-left:30rpx;margin-top:100rpx;border:1px solid #ddd;width:80%;margin-left:80rpx;margin-bottom:70rpx;" placeholder="请输入新昵称" />
+<button  formType="submit"  style="background-color:#2fbdaa;width:40%;color:#fff;height:30px;line-height:30px;font-size:35rpx;" >确认修改 </button>
+</form>

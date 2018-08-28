@@ -1,0 +1,2 @@
+<!--pages/video/video.wxml-->
+<video class='vid' bindended='back' src="http://www.chinascw.net{{video_url}}"></video>

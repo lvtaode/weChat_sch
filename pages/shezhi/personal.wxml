@@ -1,0 +1,91 @@
+<view class="personal">
+     <view class="personal_box" style="height:120rpx;line-height:120rpx;">
+          <view class="pre_box_left">
+          头像
+          </view>
+          <view class="pre_box_right" bindtap="pushImg">
+          <image   wx:if="{{user.face !=null}}" style="height:70rpx;width:70rpx;vertical-align:middle;margin-right:20rpx;" src="{{  tempFilePaths[0]  ||'http://www.chinascw.net/attachs/'+user.face }}" />
+           <image wx:if="{{user.face ==null}}" style="height:70rpx;width:70rpx;vertical-align:middle;margin-right:20rpx;" src="http://www.chinascw.net/attachs/default.jpg" />
+          </view>
+     </view>
+
+     <view class="personal_box" >
+          <view class="pre_box_left">
+          昵称： {{nickname}}
+          </view>
+          <view class="pre_box_right" bindtap='showDialogBtn'>
+          <!-- <navigator url="/pages/shezhi/nicheng?userId={{userId}}"> -->
+              修改
+          <!-- </navigator> -->
+         
+          </view>
+     </view>
+     <view class="bgc"></view>
+ <!-- <view class="personal_box" >
+          <view class="pre_box_left">
+          账户设置
+          </view>
+          <view class="pre_box_right">
+     
+          </view>
+     </view>
+
+ <view class="personal_box" >
+          <view class="pre_box_left">
+          手机
+          </view>
+          <view class="pre_box_right">
+          <navigator url="/pages/shezhi/iphone?userId={{userId}}">
+             {{user.mobile}}
+          </navigator>
+     
+          </view>
+     </view>
+     
+ <view class="personal_box" >
+          <view class="pre_box_left">
+         微信
+          </view>
+          <view class="pre_box_right">
+       {{wx}}
+          </view>
+     </view> -->
+   <view class="bgc"></view>
+ 
+ <view class="personal_box" >
+          <view class="pre_box_left">
+         安全设置
+          </view>
+          <view class="pre_box_right">
+         
+          </view>
+     </view>
+         
+ <view class="personal_box" >
+          <view class="pre_box_left">
+     密码
+          </view>
+         
+          <view class="pre_box_right">
+           <navigator url="/pages/shezhi/changePsw?userId={{userId}}">
+         修改
+         </navigator>
+          </view>
+     </view>
+</view>
+
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">修改昵称</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input auto-focus='true' placeholder-class="input-holder" type="text" class="input" placeholder="{{user.nickname}}" bindinput='inputChange'></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

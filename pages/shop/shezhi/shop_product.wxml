@@ -1,0 +1,39 @@
+<!--pages/shop/shezhi/shop_product.wxml-->
+   <scroll-view scroll-y="true" style='height:100vh' 
+ bindscrolltolower="lower" lower-threshold="50" scroll-top="50" scroll-with-animation="true">
+<view class='title'>
+  商铺产品管理
+</view>
+<view class='box' hidden='{{show}}'>
+      您还未添加商品
+</view> 
+<!--产品列表 -->
+         <view class='con' wx:for='{{product}}' wx:key="{{product}}">
+               <view class='pic'> 
+                   <image style="width:320rpx;height:200rpx;" src='{{"http://www.chinascw.net/attachs/"+item.photo}}'></image>
+                    <!-- <view class='shenhe'>
+                      {{item.audit==1?'已通过':'未审核'}}
+                    </view>   -->
+              </view>
+              <view class='content'>
+                    <text>产品名称 : {{item.title}}</text>
+                    <text>发布时间 : {{item.create_time}}</text>
+                    <view class='btn'>
+                        <button bindtap='edit' data-goods_id="{{item.goods_id}}">编辑</button>
+                        <button style='background-color:grey' bindtap="remove" data-goods_id="{{item.goods_id}}" data-city_id="{{item.city_id}}" data-cate_id="{{item.cate_id}}">删除</button>
+                    </view> 
+               </view> 
+        </view> 
+
+<loading hidden="{{hid}}">正在加载中...</loading>
+
+<!-- 页面底部 -->
+
+<view class='foot'>
+      <!-- <view>5 条记录   1/1页</view> -->
+      <navigator url='/pages/shop/product/add?shop_id={{shop_id}}'>
+           <button class='add_btn'>添 加 商 品</button>
+      </navigator>
+      
+</view>
+    </scroll-view>

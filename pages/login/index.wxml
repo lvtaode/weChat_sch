@@ -1,0 +1,132 @@
+
+<view class="content" hidden="{{csz}}"> 
+<!--上方logo  -->
+<view class='top_logo'>
+     <image src='/images/logo.jpg'></image> 
+     <text>—— 最专业  最全面  最准确 ——</text>
+</view>
+
+    <form bindsubmit="formSubmit">
+        <view class="input-area">
+
+          <input id="username" name="username" maxlength='40' type="text" placeholder="用户名/手机号" />
+
+          <input id="password" name="password" maxlength='20' type="password" placeholder="密码" />
+          
+        </view>
+        <view class="btn-area" style='margin:80rpx auto 30rpx;;'>
+            <button  disabled="{{disabled}}" style="background-color:{{loginBtnBgBgColor}}"   formType="submit"  loading="{{btnLoading}}"> {{loginBtnTxt}} </button>
+            <!-- <view class="txt-area">
+                <navigator redirect url="../findpassword/index"><text class="forgot-password">忘记密码？</text></navigator>
+                <navigator redirect url="../regist/index"><text class="register">注册账号</text></navigator> 
+            </view> -->
+        </view>
+    </form>
+
+      <!-- <progress class="myprogress" percent="{{percent }}" color="{{color}}" active/> 
+    <view class="disanfang">
+      第三方登录
+      </view>
+      <view class="imgBox">
+      <image  style="width:90rpx;height:90rpx;" src="http://www.chinascw.net/themes/default/Mobile/statics/img/other3.png" />
+      <image  style="margin-left:20rpx;width:90rpx;height:90rpx;" src="http://www.chinascw.net/themes/default/Mobile/statics/img/other2.png" />
+      </view>  -->
+      <view style='color:#0aa1ed;font-size:28rpx; font-family: "楷体"' bindtap="call"  data-tel="400-900-9633" >
+          未注册? 联系客服 : 400-900-9633
+      </view>
+  </view> 
+<view class="container" hidden="{{dlcg}}" >
+	<view class="userinfo">
+  <image  wx:if="{{face==null}}" class="userinfo-avatar" src="http://www.chinascw.net/attachs/default.jpg" background-size="cover"></image>
+		<image  wx:if="{{face!=null}}"class="userinfo-avatar" src="{{'http://www.chinascw.net/attachs/'+face}}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{nickname}} </text>
+	</view>
+  <!-- <view style="height:20rpx;background: #eee;width:100%;"></view> -->
+
+
+  <!-- 下面具体条例 -->
+
+  <!-- <view class="my-item">
+  
+    <navigator url="/pages/shezhi/personal?userId={{ userId}}" hover-class="navigator-hover">
+    
+    <image style="width:45rpx;height:45rpx;vertical-align:middle;margin-right:5px" src="../../images/we_chat.png"/>
+    绑定微信号
+    </navigator>
+  </view> -->
+
+    <view class="my-item" bindtap='bindTel'>
+  
+    <!-- <navigator url="/pages/shezhi/iphone?userId={{userId}}"> -->
+    <image style="width:50rpx;height:50rpx;vertical-align:middle;margin-right:3px" src="../../images/mobile.png"/>
+    手机号
+    <text class='mobile'>{{mobile}}</text>
+    <!-- </navigator> -->
+  </view> 
+
+  <view class="my-item">
+  
+    <navigator url="/pages/shezhi/personal?userId={{ userId}}" hover-class="navigator-hover">
+    
+    <image style="width:40rpx;height:40rpx;vertical-align:middle;margin-right:5px" src="../../images/gr.png"/>
+    个人设置
+    </navigator>
+  </view>
+  <view  bindtap="call"  data-tel="400-900-9633" class='mind' hidden='{{!trigger}}'>* 入驻商家，请拨打 400-900-9633
+   </view>
+   <view class="my-item" hidden='{{trigger}}'>
+    <navigator url="/pages/shezhi/business/main?userId={{ userId}}" hover-class="navigator-hover">
+     <image style="width:35rpx;height:35rpx;vertical-align:text-bottom;margin-right:8px" src="../../images/home_1.png"/>
+    石材商家设置</navigator>
+  </view> 
+  <view class="my-item" hidden='{{trigger}}'>
+    <navigator url="/pages/shezhi/caozuosc" hover-class="navigator-hover">
+     <image style="width:40rpx;height:40rpx;vertical-align:middle;margin-right:8px" src="../../images/czsc.png"/>
+    操作手册</navigator>
+  </view>
+ 
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <navigator url='/pages/shezhi/collection/shop?userId={{userId}}' hover-class="navigator-hover">
+    <view class="my-item">
+   <image style="width:40rpx;height:40rpx;vertical-align:middle;margin-right:8px" src="../../images/sjsc.png"/>
+    商家收藏
+    <text class='num'>{{shopNum}}</text>
+  </view>
+  </navigator>
+  <navigator url='/pages/shezhi/collection/goods?userId={{userId}}' hover-class="navigator-hover">
+<view class="my-item" >
+ <image style="width:40rpx;height:40rpx;vertical-align:middle;margin-right:8px" src="../../images/cpsc.png"/>
+    产品收藏
+    <text class='num'>{{productNum}}</text>
+  </view>
+  </navigator>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <navigator url='/pages/shezhi/my_publish?userId={{userId}}'>
+      <view class="my-item" >
+      <image style="width:40rpx;height:40rpx;vertical-align:middle;margin-right:8px" src="../../images/fb.png"/>
+        我的发布(供购信息)
+      </view>
+  </navigator>
+<view class="my-item" >
+  <navigator url="/pages/jobPublish/list?userId={{userId}}">
+    <image style="width:45rpx;height:45rpx;vertical-align:middle;margin-right:5px" src="../../images/fabu.png"/>
+    我的发布(求职信息)
+    </navigator>
+</view>
+<view class="my-item" >
+<navigator url="/pages/toutiao/tt_list?shopId={{shopId}}">
+ <image style="width:50rpx;height:50rpx;vertical-align:middle;margin-right:6px" src="../../images/tt.png"/>
+    头条
+    </navigator>
+  </view>
+   <!-- <view style="height:20rpx;background: #eee;width:100%;"></view>  -->
+ <view style='padding:20px 0;background: #eee;'>
+    <button type="warn" bindtap="relogin" style='font-size:30rpx;width:50%'>退出当前账号</button>
+ </view>
+    
+ 
+  
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+</view>

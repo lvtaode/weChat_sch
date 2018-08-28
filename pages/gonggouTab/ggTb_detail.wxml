@@ -1,0 +1,48 @@
+
+
+<loading hidden="{{hidden}}" bindchange="loadingChange">正在加载中...</loading>
+<view class="gonggou">
+<view  class="gg_box">
+<view class="gg_left" wx:if="{{user==null}}">
+  <image  src="{{'http://www.chinascw.net/attachs/'+shop.photo}}"/>
+   </view>
+   
+   <view class="gg_left" wx:if="{{shop==null}}">
+    <image  src="http://www.chinascw.net/attachs/default.jpg"/>
+   </view>
+ 
+   <view class="gg_right">
+     <view class="gg_title">{{user.nickname || shop.shop_name}}</view>
+     <view class='contact'>
+      联系人：{{detail.mans}}
+     </view>
+     <view class="tell">
+     电话：{{detail.tel}}
+     </view>
+   </view>
+   <view style=" clear: both;"></view>
+   </view> 
+<view class="bgc"></view>
+<!--供购详情  -->
+
+<view class="gg_detail">
+ <view class="gg_detail_title">{{detail.title}}</view>
+ 
+
+ <view class="dd_detail_time">
+发布日期:{{detailTime
+}}
+</view>
+<view class="dd-detail_information">
+{{detail.details}}
+
+</view>
+</view>
+<view class="detail_img">
+  
+  <view class='detail_img_box '  wx:for="{{pic2}}">
+  <image bindtap="picBig" data-img="{{'http://www.chinascw.net/attachs/'+item.pic }}" src="{{'http://www.chinascw.net/attachs/'+item.pic }}"/>
+  </view>
+
+</view>
+</view>

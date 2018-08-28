@@ -1,0 +1,22 @@
+<!--pages/shezhi/my_publish.wxml-->
+
+<!--用户未发布消息时显示的内容  -->
+<view class='empty_content' hidden='{{trigger}}'>
+    <text>您还未发布任何消息！</text> 
+    <navigator url='/pages/gonggou/publish?uid={{userId}}'>
+        <button>去发布</button>
+    </navigator>  
+</view>
+
+
+
+<view wx:for="{{msgList}}" wx:key="{{msgList}}">
+          <view class='msg' id='{{item.post_id}}' bindtap='{{item.audit==1?"jump":"hint"}}'>
+                <image src='/images/lg.png' style='width:38rpx;height:40rpx;vertical-align:text-bottom'></image>
+                <text style='padding:0 10rpx;'>{{item.f_choose==1?"求购":"供应"}}:</text>
+                 <text class='title'>{{item.title}} </text> 
+                <text class='ellipsis'></text> 
+                <text> {{item.create_time}} </text>
+                <text class='{{item.audit==1?"checked":"check"}}'>{{item.audit==1?"已通过":"待审核"}}</text>  
+          </view> 
+</view>

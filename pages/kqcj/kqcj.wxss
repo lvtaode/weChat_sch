@@ -1,0 +1,53 @@
+.kq_list{
+  width:100%;
+height:auto;
+padding:20rpx;
+box-sizing:border-box;
+
+}
+.kq_img{
+  width:100%;
+  height:300rpx;
+}
+
+.kq_title{
+  width: 100%;
+  height:60rpx;
+  font-size:1rem;
+  line-height: 60rpx;
+  font-weight:bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.kq_rz{
+  width:100%;
+height:44rpx;
+font-size:0.7rem;
+line-height:40rpx;
+color:#777;
+
+}
+.kq_pro{
+ width:100%;
+height:60rpx;
+font-size:0.76rem;
+line-height:60rpx;
+ overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+.kq_addr{
+  width:100%;
+  height:auto;
+  line-height: 44rpx;
+  font-size: 0.76rem;
+  overflow: hidden;
+
+}
+.bgc{
+  background: #F2f2f2;
+  width: 100%;
+  height: 20rpx;
+}

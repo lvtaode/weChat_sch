@@ -1,0 +1,27 @@
+
+
+ <loading hidden="{{hidden}}" bindchange="loadingChange">正在加载中...</loading>
+   <!--标题栏  -->
+   <image style="height:500rpx;width:100%;"src="{{'http://www.chinascw.net/attachs/'+detail.photo}}"/>
+   <view class="detail_title" style="text-align:center;">{{detail.title}}</view>
+     <view class='shop_Box'>
+      <view class='shop_address'>
+       <text class='shop_contact' style='display:block;'></text>
+       地址：{{detail.addr}}
+      <text class='shop_iphone'>物流部：{{detail.mobile}}</text>
+      </view>
+     <view class='shop_image'>
+     <image bindtap="call"  data-tel="{{detail.mobile}}"  style='width:50rpx;height:50rpx;' src='http://www.chinascw.net/themes/default/Mobile/statics/img/telIco.gif'/>
+     </view>
+      </view>
+       
+  
+   <!--商家介绍  -->
+   <view class='title' > <view class='line_red' style='margin-left:0;'></view> 物流描述</view>
+
+   <view class='shop_intro'>
+  {{detail.details}}
+   </view>
+ 
+      
+   <loading hidden="{{hidden}}" bindchange="loadingChange">正在加载中...</loading>

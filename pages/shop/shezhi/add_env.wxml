@@ -1,0 +1,25 @@
+<!--pages/shop/product/add.wxml-->
+<view class='title'>
+  图片上传大小为960*560,每次只可上传一张图片
+</view>
+
+<form bindsubmit="formSubmit">
+
+  <view style='height:300rpx;'>
+        <text style='display:block;height:60rpx;margin-bottom:30rpx;'>*  请上传店铺形象图:</text>
+        <view style='height:200rpx;'>
+            <view class='photo_demo' style='float:left'>
+              <image src="{{'https://www.chinascw.net/attachs/'+ imageFilePaths}}" style='width:310rpx;height:180rpx'></image>
+            </view>
+          <view class='right_content'>
+                <button bindtap='uploadImg'>上传图片</button>
+                <text class='explain'>每次只可上传一张图片</text>
+            </view>
+        </view>            
+  </view>
+   <button style='margin-top:80rpx;width:300rpx;height:70rpx;line-height:70rpx;' form-type='submit'>
+提交
+   </button>
+</form>
+
+

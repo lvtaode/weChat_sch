@@ -1,0 +1,48 @@
+<!--pages/shop/shezhi/shop_manage.wxml-->
+<view class='title'>
+  请仔细填写您的信息资料,带 * 的表示必须填写项。
+</view>
+
+<form bindsubmit='formSubmit'>
+         <view>
+            <text>* 请输入店铺名称:</text>
+            <input value='{{shop.shop_name}}' name="shop_name"></input>
+         </view>
+          <view>
+                <text>请上传公司logo:</text>
+                <view style='height:200rpx;'>
+                    <view class='photo_demo' style='width:160rpx;height:160rpx;float:left'>
+                      <image src="{{logoFilePaths}}"  style='width:150rpx;height:150rpx'></image>
+                   </view>
+                  <view class='right_content'>
+                        <button bindtap='uploadImg' id='logo'>上传图片</button>
+                        <text class='explain'>logo尺寸为150*150(可不填)</text>
+                    </view>
+                </view>            
+         </view>
+         <view>
+                <text>* 请上传店铺形象图:</text>
+                <view style='height:200rpx;'>
+                    <view class='photo_demo' style='float:left'>
+                      <image src="{{imageFilePaths}}"  style='width:250rpx;height:150rpx'></image>
+                </view>
+                <view class='right_content'>
+                    <button bindtap='uploadImg' id="image">上传图片</button>
+                    <text class='explain'>形象图片尺寸为960*350</text>
+                </view>
+                </view>            
+         </view>
+         <view>
+            <text>* 店铺联系人:</text>
+            <input value='{{shop.contact}}' name='contact'></input>
+         </view> 
+         <view>
+            <text>* 联系人电话号码:</text>
+            <input value='{{shop.tel}}' name='tel' bindblur='reg'></input>
+         </view>
+         <view>
+            <text>店铺详情介绍:</text>
+            <textarea name='details' value="{{details.details}}"></textarea>
+         </view>
+    <button style='margin-top:80rpx;width:300rpx;height:70rpx;line-height:70rpx;' form-type='submit'>确认修改</button>
+</form>

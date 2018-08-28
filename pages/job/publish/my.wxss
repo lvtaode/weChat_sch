@@ -1,0 +1,46 @@
+/* pages/job/publish/my.wxss */
+button{
+  width: 60%;
+  margin: 100rpx auto;
+  color:#fff;
+  background-color: #3283B0;
+}
+page{
+  background-color: #ededee;
+  font-size: 32rpx;
+}
+.job_list{
+  margin-top: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.job_list .item{
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+  background-color: #fff;
+  position: relative;
+}
+.job_list .item view{
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: 50rpx;
+  margin-bottom: 20rpx;
+  line-height: 35rpx;
+}
+.job_list text{
+  font-family:"宋体";
+  font-weight: 600;
+}
+.addr{
+    display: inline-block;
+    width: 100%;
+    height: 65rpx;
+    overflow:hidden;
+}
+.shenhe{
+  position: absolute;
+  width: 150rpx;
+  height: 150rpx;
+  top: 20%;
+  left: 35%;
+}

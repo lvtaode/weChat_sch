@@ -1,0 +1,33 @@
+<!--pages/shop/shezhi/shop_env.wxml-->
+<view class='title'>
+  环境图仅展示最近上传的三张,不用的删除即可替换
+</view>
+<view class='box' hidden='{{hid}}'>
+      您还未添加环境图
+</view> 
+<!--产品列表 -->
+<block wx:for='{{banner}}' wx:key="{{banner}}">
+    <view class='container'>
+          <view class='pic'>
+              <image style="width:320rpx;height:200rpx;" src='http://www.chinascw.net/attachs/{{item.photo}}'></image>
+          </view>
+          <view class='content'>
+                <text>发布时间 : {{item.create_time}}</text>
+                <view class='btn'>
+    
+                         <button bindtap='remove' id="{{item.pic_id}}">删 除</button>
+            
+               
+                </view>
+          </view>
+    </view>
+</block>
+
+<!-- 页面底部 -->
+
+<view class='foot'>
+      <view>共 {{count}} 条记录</view>
+    <navigator url='/pages/shop/shezhi/add_env?shopId={{shopId}}'>
+      <button class='add_btn'>添加环境图</button>
+    </navigator>
+</view>

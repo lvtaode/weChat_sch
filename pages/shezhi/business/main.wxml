@@ -1,0 +1,56 @@
+<!--pages/shezhi/business/main.wxml-->
+
+<!-- 顶部banner图片  -->
+<swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">    
+      <block wx:for="{{banner}}" wx:key="{{banner}}">    
+        <swiper-item>    
+             <image src="{{'http://www.chinascw.net/attachs/'+item.photo}}" class="slide-image" mode="aspectFill"/>  
+        </swiper-item>    
+      </block>    
+    </swiper>   
+<view  style='text-align:center;margin:10px auto'>
+  <text style='font-size:45rpx;font-weight:600'>欢迎您!{{shop.shop_name}}</text>
+</view>
+
+<!-- 中间导航栏 -->
+<view class='nav'>
+  <navigator style='width:150rpx;font-size:32rpx;text-align:center;font-weight:600' url='/pages/shop/shezhi/shop_manage?shopId={{shop.shop_id}}&userId={{userId}}'>
+        <image src="http://www.chinascw.net/public/images/dpgl_1.png"></image>
+        <text>店铺管理</text>
+        
+    </navigator>
+    <navigator style='font-weight:600;width:150rpx;font-size:32rpx;font-weight:600;text-align:center;' url='/pages/shop/shezhi/shop_product?shopId={{shop.shop_id}}'>
+      <image src="http://www.chinascw.net/public/images/shop_pro_2.png"></image>
+      <text>商铺产品</text>
+  </navigator>
+  <navigator style='width:150rpx;font-size:32rpx;text-align:center;font-weight:600' url='/pages/shop/shezhi/shop_env?shopId={{shop.shop_id}}'>
+      <image src="http://www.chinascw.net/public/images/sphj_3.png"></image>
+      <text>商铺环境</text>
+  </navigator>
+  <navigator style='width:150rpx;font-size:32rpx;text-align:center;font-weight:600' url='/pages/job/publish/my?cityId={{shop.city_id}}&areaId={{shop.area_id}}&shop_name={{shop.shop_name}}&shop_id={{shop.shop_id}}'>
+      <image src="http://www.chinascw.net/public/images/zpxi_1.png"></image>
+      <text>招聘信息</text>
+  </navigator>
+ 
+</view>
+
+<!--联系电话  -->
+
+<view class='contact'>
+    <view>如果遇到问题请及时联系我们!</view>
+    <view class='tel' style='float:left;' bindtap='call' data-tel='400-900-9633'>
+        <image src="../../../images/tel.png"></image>
+        <text>400-900-9633</text>
+    </view>
+    <view class='tel' style='float:right;' bindtap='call' data-tel='029-86250977'>
+        <image src="../../../images/tel.png"></image>
+        <text>029-86250977</text>
+    </view>
+</view>
+
+<!--页面底部文字 -->
+<view class='foot'>
+    <text style='margin-left:10px;'>
+    * 注意事项:  \n1. 填写信息必须真实有效。\n 2. 所填信息需要审核,审核通过才会展示出来。\n3. 您在操作中如有疑问,请及时联系我们的客服。
+    </text>
+</view>

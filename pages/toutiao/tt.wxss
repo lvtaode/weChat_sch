@@ -1,0 +1,68 @@
+.tt_title{
+  width: 100%;
+  height:auto;
+  box-sizing: border-box;
+  padding:10rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tt_text{
+  width: 100%;
+  height:auto;
+  padding:30rpx;
+}
+.tt_addr,.tt_iphone{
+  width: 80%;
+  height:auto;
+  line-height: 40rpx;
+  font-size:31rpx;
+  color:#666;
+  margin-bottom:5px;
+}
+.bgc{
+  background: #F2f2f2;
+  width: 100%;
+  height: 10rpx;
+}
+.gg_detail{
+  width: 100%;
+  height:auto;
+}
+.gg_detail_title{
+  width: 100%;
+  height: auto;
+  line-height: 56rpx;
+  font-size:0.9rem;
+  text-align: center;
+  margin-top:20rpx;
+  box-sizing:border-box;
+padding:0 20rpx;
+
+}
+.dd_detail_time{
+  width: 100%;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size:0.65rem;
+  text-align: center;
+  color:#736e6e;
+  margin:16rpx 0;
+}
+.dd-detail_information{
+  box-sizing:border-box;
+padding:0 20rpx;
+width:100%;
+height:auto;
+font-size:0.8rem;
+line-height:50rpx;
+color:#777;
+margin-bottom:20px;
+
+
+}
+.zx_img img{
+height:80%;
+width:80%;
+}

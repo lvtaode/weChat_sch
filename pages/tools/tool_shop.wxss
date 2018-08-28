@@ -1,0 +1,105 @@
+@import  '/pages/index/index.wxss';
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width:50%;  
+    color: #777777;  
+}  
+.on{ color: #da7c0c;  
+    border-bottom: 5rpx solid #da7c0c;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+.swiper-box .tab{  
+   padding:20rpx;
+}  
+.shop_title{
+  width: 100%;
+  height: 80rpx;
+  margin-top:20rpx;
+}
+.shop_title image{
+width: 80rpx;
+height: 80rpx;
+vertical-align: middle;
+}
+.shop_title  .shop_con{
+  width: 80%;
+  height: 100%;
+vertical-align: middle;
+display: inline-block;
+line-height: 80rpx;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: 0.8rem;
+margin-left:16rpx;
+}
+.shop_Box{
+  width: 100%;
+  height: 154rpx;
+  font-size: 0.8rem;
+  margin-top:20rpx;
+}
+.shop_Box .shop_address{
+  float:left;
+  height: 100rpx;
+  width: 74%;
+  font-size: 0.8rem;
+  color:#777;
+}
+.shop_image{
+ width:66rpx;
+height:67rpx;
+float:right;
+text-align:center;
+
+border-radius:50%;
+line-height:62rpx
+}
+.shop_image image{
+  vertical-align: middle;
+  
+}
+.shop_iphone{
+  display: block;
+}
+.shop_product{
+  width: 100%;
+  height: auto;
+  margin:0 auto;
+}
+.shop_product .shop_pro_img{
+  width: 33%;
+  display: inline-block;
+height:140rpx;
+text-align: center;
+margin-top:20rpx;
+
+}
+.shop_product .shop_pro_img image{
+  width: 90%;
+}
+.shop_intro{
+  width: 100%;
+  height: auto;
+ font-size:0.8rem;
+line-height:57rpx;
+  color:#777;
+  text-indent: 2em;
+  overflow: hidden;
+
+}
+page{
+  background: #FBFBFB;
+}
+.cover{
+  width: 100%;
+  height: 300rpx;
+  position: absolute;
+  top:0;
+  z-index: 100;
+}

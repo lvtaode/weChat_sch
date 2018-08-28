@@ -1,0 +1,55 @@
+/* pages/search/search_list.wxss */
+page{
+  background-color: #EDF7F8;
+}
+.box{
+  width: 95%;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item{
+  position: relative;
+  margin-bottom: 10px;
+  background-color: #fff;
+  width: 340rpx;
+  padding-top:3px;
+  text-align: center;
+  box-shadow: 2px 3px 3px #989A9A;
+  border-radius: 3px;
+}
+.title{
+  position: absolute;
+  background-color: #FF6600;
+  color:#fff;
+  font-size: 30rpx;
+  width: 80rpx;
+}
+.item image{
+  width: 320rpx;
+  height:117px;
+}
+.item view{
+    font-size:0.7rem;
+    height:70rpx;
+    line-height:70rpx;
+    text-align: center;
+    color:#6A6A6A;
+}
+.empty{
+ text-align:center;
+ height:200px;
+ line-height:200px;
+ width: 90%;
+ margin: 0 auto;
+ border-radius: 20px;
+ background-color: #fff;
+}
+.shop_name{
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

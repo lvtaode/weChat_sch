@@ -1,0 +1,92 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/job/publish/zhaopin",
+    "pages/jobPublish/publish",
+    "pages/jobPublish/list",
+    "pages/job/publish/my",
+    "pages/job/select",
+    "pages/job/qiuzhi",
+    "pages/job/zhaopin",
+    "pages/video/video",
+    "pages/bannerShop/bannerShop",
+    "pages/zx_detail/zx_detail",
+   "pages/shezhi/collection/shop",
+    "pages/login/index",
+    "pages/zhaopin/information",
+    "pages/tools/tool_shop",
+     "pages/shop/shop",
+    "pages/tools/tools_list",
+    "pages/shop/shezhi/add_env",
+    "pages/shop/product/edit",
+    "pages/shop/product/add",
+    "pages/shop/shezhi/shop_product",
+    "pages/shop/shezhi/shop_manage",
+    "pages/shezhi/business/main",
+    "pages/shop/shezhi/shop_env",
+    "pages/toutiao/tt_list",
+    "pages/gonggou/gg_detail",
+    "pages/toutiao/tt",
+    "pages/wuliu/wl",
+    "pages/toutiao/publish",
+    "pages/gonggou/publish",
+    "pages/gonggou/gonggou",   
+    "pages/shezhi/my_publish",
+    "pages/search/list", 
+    "pages/shezhi/collection/goods",    
+    "pages/city/city",
+    "pages/recommend_shop/recommend_list",
+    "pages/localStone/localStone",
+    "pages/localStoneDetail/localStoneDetail",
+    "pages/background/background",
+    "pages/scKind/scKind",
+    "pages/gonggouTab/gonggouTb",
+    "pages/gonggouTab/ggTb_detail",
+   
+    "pages/zx_detail/zx",
+    "pages/kqcj/kqcj",
+    "pages/wuliu/wl_detail",
+    "pages/zhuangxiu/zx",
+    "pages/zhuangxiu/zx_detail",
+    "pages/regist/index",
+    "pages/findpassword/index",
+    "pages/main/index",
+    "pages/shezhi/personal",
+    "pages/shezhi/iphone",
+    "pages/shezhi/caozuosc",
+    "pages/shezhi/changePsw"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3283b0",
+    "navigationBarTitleText": "石材汇—中国优质石材网",
+    "navigationBarTextStyle":"#fff"
+  },
+   "tabBar": {
+      "color": "#6F6F6F",
+      "selectedColor": "#0058AB",
+      "borderStyle": "black",
+      "backgroundColor": "#F0F0F0",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home_1.png"
+    },
+    {
+      "pagePath": "pages/gonggou/gonggou",
+      "text": "供购信息",
+      "iconPath": "images/kind.png",
+      "selectedIconPath": "images/kind_1.png"
+    },
+    {
+      "pagePath": "pages/login/index",
+      "text": "个人中心",
+      "iconPath": "images/kind.png",
+      "selectedIconPath": "images/kind_1.png"
+    }
+    ]
+   
+  }
+}

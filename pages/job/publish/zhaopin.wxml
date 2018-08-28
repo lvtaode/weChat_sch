@@ -1,0 +1,53 @@
+<!--pages/job/publish/zhaopin.wxml-->
+
+<form bindsubmit='formSubmit'>
+    <view class='title'>
+        公司信息
+    </view>
+    <view>
+        <label>所在城市:</label>
+        <text>{{location}}</text>
+    </view>
+    <view>
+        <label>公司名称:</label>
+        <text>{{name}}</text>
+    </view>
+    <view style='padding:5rpx 45rpx;'>
+          <label>联系人:</label>
+          <input name="contact" type='text' placeholder='请输入联系人'></input>
+    </view>
+    <view style='padding:5rpx 45rpx;'>
+          <label>联系电话:</label>
+          <input type='number' name="phone" minlength="7" maxlength='11' placeholder='请输入电话'></input>
+    </view> 
+    <view style='padding:5rpx 45rpx 15rpx;'>
+          <label>公司地址:</label>
+          <input name="addr" placeholder='请输入公司地址'></input>
+    </view>
+    <view class='title'>
+        工作岗位
+    </view>
+    <view style='padding:8rpx 40rpx;'>
+        <label>招聘岗位:</label>
+        <view  class='box'  bindtap='down'><text>{{jobSelect}}</text>
+          <view class='menu' hidden='{{job_show}}'>
+                <view wx:for="{{jobList}}" wx:key="{{item.jcate_id}}" data-index="{{item.jcate_id}}" data-content="{{item.station}}" bindtap='select'>{{item.station}}</view>
+          </view>
+        </view>
+    </view>
+    <view style='padding:8rpx 40rpx;'>
+          <label>薪资待遇:</label>  
+          <view  class='box'  bindtap='min_down' style='padding:0;'><text>{{minSelect}}</text>
+          <view class='menu' hidden='{{min_show}}'>
+                <view wx:for="{{minList}}" wx:key="{{item}}"  data-content="{{item.station}}" data-index="{{item.jcate_id}}" bindtap='min_select'>{{item.station}}</view>
+          </view>
+        </view>
+        -- 至 --
+        <view  class='box'  bindtap='max_down' style='padding:0;'><text>{{maxSelect}}</text>
+          <view class='menu' hidden='{{max_show}}'>
+                <view wx:for="{{maxList}}" wx:key="{{item}}" data-max="{{item.station}}" data-index="{{item.jcate_id}}"  bindtap='max_select'>{{item.station}}</view>
+          </view>
+        </view>
+    </view> 
+    <button form-type='submit'>确 认 发  布</button>
+</form>

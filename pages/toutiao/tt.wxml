@@ -1,0 +1,41 @@
+<view hidden='{{trigger}}'>
+      <navigator url='/pages/shop/shop?shop_id={{shop.shop_id}}'>
+            <view class="tt_title">
+              <image  style="height:100rpx;width:100rpx;border-radius:50%;vertical-align:middle;"src="{{'http://www.chinascw.net/attachs/'+shop.photo}}" /> 
+              {{ shop.shop_name}}
+              <view style='color:red;font-size:22rpx;margin-top:10px'>(点击可跳转至商铺)</view>
+            </view>
+            
+      </navigator>
+
+      <view class="bgc"></view>
+      <view class="tt_text">
+          <view  class="tt_iphone">
+                电话：{{shop.tel}}
+          </view>
+          <view class="tt_addr">
+                地址:{{shop.addr}}
+          </view>
+          <view style='float:right;position:relative;right:60rpx;bottom:40rpx'>
+                <image  bindtap="call"  data-tel="{{shop.tel}}" style='width:24px;height:24px;' src='http://www.chinascw.net/themes/default/Mobile/statics/img/telIco.gif'/>
+          </view>
+          <view>
+              <text style='font-size:29rpx;color:#736e6e;'>*联系时,请说明是在石材汇上看到的</text>
+          </view> 
+      </view>
+      <view class="bgc"></view>
+</view>
+
+<view class="gg_detail">
+ <view class="gg_detail_title">{{ttDetails.title}}</view>
+ <view class="dd_detail_time">
+发布日期:{{ttDetails.create_time}}
+</view>
+<view class="dd-detail_information">
+{{ttDetails.details}}
+
+</view>
+</view>
+<view class="zx_img" style="text-align:center;">
+<image src="{{'http://www.chinascw.net/attachs/'+ttDetails.photo}}"/>
+</view>

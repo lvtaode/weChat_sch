@@ -1,0 +1,31 @@
+
+ <scroll-view class="page_list" scroll-y="true" 
+style="height:100vh;display: -webkit-flex; flex-direction: column;   " bindscrolltolower="lower" lower-threshold="50" scroll-top="50" scroll-with-animation="true"
+>
+<block wx:for="{{list}}">
+<navigator url='/pages/bannerShop/bannerShop?orderby={{item.shop_id}}'>
+<view class="kq_list">
+   <view class="kq_img"> 
+   <image style="width:100%;height:100%;"  src="{{'http://www.chinascw.net/attachs/'+item.photo}}" />
+   
+   </view>
+   <view class="kq_title">
+       {{item.shop_name}} <image style="width:24px;height:24px;vertical-align:middle;" src="http://www.chinascw.net/themes/default/Mobile/statics/img/tp_1.jpg"/>
+
+        <image style="width:24px;height:24px;vertical-align:middle;" src="http://www.chinascw.net/themes/default/Mobile/statics/img/tp_2.jpg"/>
+   </view>
+   <view class="kq_rz">
+   企业认证 | 资质认证
+   </view>
+   <view class="kq_addr">
+   <image style="width:24px;height:24px;vertical-align:middle;" src="http://www.chinascw.net/themes/default/Mobile/statics/img/tp-3.jpg"/>
+  {{item.addr}}
+   </view>
+</view>
+  <view class="bgc">
+</view>
+</navigator>
+</block>
+ <view style='width:100%;height:30rpx;font-size:0.8rem;color:#777;text-align:center;' hidden="{{jiazai}}">--没有数据啦--</view>
+</scroll-view>
+<loading hidden="{{hidden}}" bindchange="loadingChange">正在加载中...</loading>

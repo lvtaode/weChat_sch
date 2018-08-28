@@ -1,0 +1,15 @@
+<!--pages/job/select.wxml-->
+<view class='select'>
+    <block>
+        <navigator url="/pages/job/qiuzhi">
+             <text style='color:#D15656'>求职信息</text> 
+            <image src="http://www.chinascw.net/public/images/qzxx.png"></image>
+        </navigator>
+    </block>
+    <block>
+        <navigator url="/pages/job/zhaopin">
+            <text style='color:#17669E'>商家招聘</text>
+            <image src="http://www.chinascw.net/public/images/sjzp.png"></image>
+        </navigator>
+    </block>    
+</view> 

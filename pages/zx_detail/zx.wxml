@@ -1,0 +1,20 @@
+<scroll-view class="page_list" scroll-y="true" 
+style="height:100vh;display: -webkit-flex; flex-direction: column;   " bindscrolltolower="lower1" lower-threshold="50"  
+>
+<view class="news_list_box" wx:for="{{lists1}}">
+ <navigator url="/pages/zx_detail/zx_detail?article_id={{item.article_id}}">
+        <view class="news_date1">
+            <view class="news_date_c">
+                <view class="news_date_to">{{item.day}}</view>
+                <view class="news_date_bo">{{item.month}}</view>
+            </view>
+        </view>
+        <view class="news_con1">
+            <navigator class='news_a' >{{item.title}}</navigator>
+            <view class="zx_addr">{{item.details}}</view>
+            <navigator url="/pages/zx_detail/zx_detail?article_id={{item.article_id}}" class="news_con1_more"> 详情>></navigator>
+        </view>
+        </navigator>
+    </view>
+</scroll-view>
+    <loading hidden="{{hidden}}" bindchange="loadingChange">正在加载中...</loading>

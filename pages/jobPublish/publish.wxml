@@ -1,0 +1,59 @@
+<!--pages/jobPublish/publish.wxml-->
+<form bindsubmit='formSubmit'>
+    <view class='title'>
+        个人信息
+    </view>
+    <view style='padding:5rpx 45rpx;'>
+          <label>姓    名:</label>
+          <input name="name" type='text' placeholder='请输入姓名'></input>
+    </view>
+    <view style='padding:5rpx 45rpx;'>
+          <label>年    龄:</label>
+          <input name="age" type='number' placeholder='请输入年龄'></input>
+    </view>
+    <view style='padding:5rpx 45rpx;'>
+          <label>电    话:</label>
+          <input type='number' name="phone" placeholder='请输入电话'></input>
+    </view> 
+    <view style="padding-bottom:10rpx;">
+          <label style='margin-top:10rpx;'>求职地区:</label>
+          <view class='menu_box'>
+              <text style='display:inline-block;width:100%;text-align:center;' bindtap='pro_show'>{{proSelect}}</text>
+              <view  hidden='{{pro_show}}'   class='pro_menu'>
+                    <view wx:for="{{province}}" data-text="{{item.name}}" data-index="{{item.city_id}}" wx:key="{{item.city_id}}" bindtap="selPro">{{item.name}}</view>
+              </view>
+          </view>
+          <view class='menu_box'>
+              <text style='display:inline-block;width:100%;text-align:center;' bindtap='city_show'>{{citySelect}}</text>
+              <view  hidden='{{city_show}}'   class='menu'>
+                    <view bindtap='selCity' data-text="{{item.area_name}}" data-index="{{item.area_id}}" wx:for="{{city}}" wx:key="{{item.area_id}}">{{item.area_name}}</view>
+              </view>
+          </view>
+    </view>
+    <view class='title'>
+        职位信息
+    </view>
+    <view style='padding:8rpx 40rpx;'>
+        <label>招聘岗位:</label>
+        <view  class='box'  bindtap='down'><text>{{jobSelect}}</text>
+          <view class='menu' hidden='{{job_show}}'>
+                <view wx:for="{{jobList}}" wx:key="{{item.jcate_id}}" data-index="{{item.jcate_id}}" data-content="{{item.station}}" bindtap='select'>{{item.station}}</view>
+          </view>
+        </view>
+    </view>
+    <view style='padding:8rpx 40rpx;'>
+          <label>薪资待遇:</label>  
+          <view  class='box'  bindtap='min_down' style='padding:0;'><text>{{minSelect}}</text>
+          <view class='menu' hidden='{{min_show}}'>
+                <view wx:for="{{minList}}" wx:key="{{item}}"  data-content="{{item.station}}" data-index="{{item.jcate_id}}" bindtap='min_select'>{{item.station}}</view>
+          </view>
+        </view>
+        -- 至 --
+        <view  class='box'  bindtap='max_down' style='padding:0;'><text>{{maxSelect}}</text>
+          <view class='menu' hidden='{{max_show}}'>
+                <view wx:for="{{maxList}}" wx:key="{{item}}" data-max="{{item.station}}" data-index="{{item.jcate_id}}"  bindtap='max_select'>{{item.station}}</view>
+          </view>
+        </view>
+    </view> 
+    <button form-type='submit'>确 认 发  布</button>
+</form>

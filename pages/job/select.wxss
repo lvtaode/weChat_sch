@@ -1,0 +1,14 @@
+/* pages/job/select.wxss */
+.select{
+  text-align: center;
+}
+.select image{
+  width: 300rpx;
+  height:300rpx;
+}
+.select text{
+  display: block;
+  font-weight:600;
+  margin: 80rpx 0 30rpx;
+  font-size: 38rpx;
+}

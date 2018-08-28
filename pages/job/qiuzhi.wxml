@@ -1,0 +1,46 @@
+<!--pages/job/qiuzhi.wxml-->
+<view class='top_select'>
+    <view class="section">
+        <picker bindchange="bindPlaceChange" value="{{city_index}}" range="{{city_list}}">
+        <view class="picker">
+      地区：{{city_list[city_index]||"点击选择"}}
+    </view>
+        </picker>
+    </view>
+    <view class="section">
+        <picker bindchange="bindJobChange" value="{{index}}" range="{{jobs}}">
+         <view class="picker">
+            招聘岗位：{{jobs[index]||"点击选择"}}
+          </view>
+        </picker>
+    </view>
+</view>
+<view class='job_list'>
+    <view class='item'  wx:for="{{list}}" wx:key="{{item}}">
+        <view class='left_content' style="width:48%">
+            <text style='color:#3283B0;font-size:38rpx;'>
+              {{item.name}}
+            </text>
+            <text>
+                年龄:{{item.birthday}}
+            </text>
+            <view style='padding-left:0;padding-top:35rpx;'>
+               <image bindtap='call' data-tel='{{item.phone}}'  style='width:50rpx;height:50rpx;vertical-align:middle;margin-right:15rpx;' src='http://www.chinascw.net/themes/default/Mobile/statics/img/telIco.gif'/>{{item.phone}}
+            </view>
+        </view>
+        <view class='right_content' style='width:52%'>
+            <text>
+                求职岗位:{{item.profession}}
+            </text>        
+            <text>
+               期望薪资:{{item.money1}}-{{item.money2}}
+            </text>
+            <text>
+                求职地区:{{item.city_id+item.area_id}}
+            </text>
+        </view>
+    </view>
+</view>
+<view hidden="{{trigger}}" style='text-align:center;padding:150rpx;background-color:#fff'>
+          暂无相关求职信息...
+</view>

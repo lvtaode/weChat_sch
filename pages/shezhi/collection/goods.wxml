@@ -1,0 +1,25 @@
+
+<view class="container1">
+  <view class='title'>*向左滑动可取消收藏 </view>
+  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" 
+            data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
+          <!-- <view class="content">{{item.content}}</view> -->
+      <view class='collection' bindtap='jump'  data-goods='{{item.goods_id}}'>
+        <view>
+          <image src="{{'http://www.chinascw.net/attachs/'+item.photo}}"></image>
+        </view>
+      <view style='margin-left:40rpx;'>
+          <text style='display:block;line-height:30px;'>{{item.title}}</text> 
+          <text  style='display:block;color:#616060;font-size:26rpx;'>商家:{{item.shop_name}}</text>
+      </view>
+    </view>
+          <view class="del" data-goods='{{item.goods_id}}' catchtap="del" data-index="{{index}}">删除</view>
+  </view>
+</view>
+
+<view class='empty_content' hidden='{{choice}}'>
+    <text>您还未收藏任何产品！</text> 
+    <!-- <navigator url='/pages/gonggouTab/gonggouTb'>
+        <button>去收藏</button>
+    </navigator>   -->
+</view>

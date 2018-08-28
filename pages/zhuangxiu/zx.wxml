@@ -1,0 +1,85 @@
+
+<view class="phone_one" bindtap="clickPerson">
+ <view class="phone_personal">{{firstPerson}}</view>
+ <image src="http://www.chinascw.net/themes/default/Mobile/statics/img/icon-down.png" class="personal_image {{selectArea ? 'rotateRight' :''}}"></image> 
+ </view>
+  
+<view class="person_box" >
+  <view class="phone_select" hidden="{{selectPerson}}" >
+  <view wx:for="{{areas}}" class="select_one" bindtap="mySelect" data-me="{{item.cate_name}}" data-areaId="{{item.area_id}}">{{item.area_name}}</view>
+ </view>
+ </view>
+
+<loading hidden="{{hidden}}" bindchange="loadingChange">正在加载中...</loading>
+
+<view class="cs_list" >
+	
+        <view class="cs_list_box">
+	
+            <view class="cs_list_left" wx:for="{{list}}" wx:key="{{list}}">
+            <navigator url="/pages/zhuangxiu/zx_detail?shop_id={{item.shop_id}}">
+                <view class="cs_left_top">
+                    <view class="cs_left_top_text">
+					{{item.shop_name}}
+                    </view>
+
+                </view>
+                <view class="cs_list_img">
+                  
+                        <image  style="width:100%;height:100%;"src="{{'http://www.chinascw.net/attachs/'+item.photo}}"/>
+               
+                </view>
+              <view class="cs_list_al">
+                案例展示
+              </view>
+             <view class="cs_list-address">
+                 <view class="cs_list_address_box">
+                     <image  style="width:24rpx;height:24rpx;"src="http://www.chinascw.net/public/images/cs_ip.png" alt=""/>
+                     {{item.tel}}
+                 </view>
+                 <view class="cs_list_address_box">
+                     <image  style="width:24rpx;height:24rpx;"src="http://www.chinascw.net/public/images/cs_lxr.png" alt=""/>
+                     {{item.contact}}
+                 </view>
+                 <view class="cs_list_address_box">
+                     <image  style="width:24rpx;height:24rpx;"src="http://www.chinascw.net/public/images/cs_location_1.png" alt=""/>
+                     {{item.addr}}
+                 </view>
+
+             </view>
+             </navigator>
+            </view>
+	      <view hidden="{{zhezhao2}}" style="height:100vh;width:100%; position: absolute;left:0;top:0;margin-top:100rpx;text-align:center;background:#fff;line-height:67vh;">亲，没有此地区
+      </view>
+            <!-- <view class="cs_list_right">
+                <view class="cs_left_top">
+                    <view class="cs_left_top_text">
+                   
+                    </view>
+
+                </view>
+                <view class="cs_list_img">
+                   
+                        <image src="" alt=""/>
+                   
+                </view>
+                <view class="cs_list_al">
+                    案例展示
+                </view>
+                <view class="cs_list-address">
+                    <view class="cs_list_address_box">
+                        <image style="width:24rpx;height:24rpx;" src="http://www.chinascw.net/public/images/cs_ip.png" alt=""/>
+                    </view>
+                    <view class="cs_list_address_box">
+                        <image  style="width:24rpx;height:24rpx;"src="http://www.chinascw.net/public/images/cs_lxr.png" alt=""/>
+                    </view>
+                    <view class="cs_list_address_box">
+                        <image  style="width:24rpx;height:24rpx;"src="http://www.chinascw.net/public/images/cs_location_1.png" alt=""/>
+                    </view>
+
+                </view>
+            </view> -->
+		
+        </view>
+  
+    </view>

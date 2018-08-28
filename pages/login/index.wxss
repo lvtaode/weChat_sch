@@ -1,0 +1,88 @@
+/*.myprogress{margin:5px 0}*/
+@import "../main/index.wxss";
+ .content{text-align: center}
+.logo{margin-top: 100rpx;margin-bottom: 120rpx}
+.logo image{width:400rpx;height: 60rpx}
+.input-area{
+    background-color: #fff;
+    text-align: left;
+    padding-left: 10%;
+    /* border-bottom:1px solid #ddd; */
+}
+.input-area input{height:100rpx;line-height: 100rpx;}
+#username,#password{border-bottom:1px solid #ddd;width: 90%;}
+.btn-area{width: 80%;margin: 0 auto}
+.btn-area button{
+    /*background-color: #ff9900;*/
+    margin-top: 40rpx;
+    color: #fff
+}
+.txt-area{
+    margin-top: 30rpx;
+    display: flex;
+    justify-content:space-between;
+    font-size: 30rpx
+}
+.forgot-password{color: #888}
+.register{color:#ff9900}
+.forgot-password:active,.register:active{opacity: 0.7}
+.disanfang{
+  width: 100%;
+  height: 40rpx;
+  font-size:0.8rem;
+  line-height: 40rpx;
+  text-align: center;
+}
+.imgBox{
+  width:100%;
+  height:200rpx;
+  line-height: 200rpx;
+  text-align: center;
+}
+ .num{
+  display: inline-block;
+   width:40rpx;
+    height: 40rpx;
+    text-align: center;
+     line-height: 45rpx; 
+    background: #fafafa;
+    border: 1px solid  #dedede;
+    color: #f41414;
+    font-size: 28rpx;
+    font-style: normal;
+    border-radius: 35rpx;
+    margin-left: 320rpx;
+}
+.mobile{
+  float:right;
+  margin-right:80rpx;
+  font-size:25rpx;
+  color:#0aa1ed;
+  padding-top:3rpx; 
+}
+.mind{
+  width: 80%;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 0 auto;
+  font-size: 25rpx;
+  color:red;
+}
+  .top_logo{
+  width: 100%;
+   height: 200px;
+  margin:auto; 
+  text-align: center;
+} 
+   
+.top_logo image{
+  margin-top: 60rpx;
+  width: 200rpx;
+  height: 200rpx;
+}  
+ .top_logo text{
+  color:#0aa1ed;
+  font-size: 35rpx;
+  display: block;  
+  font-family: "楷体";
+} 

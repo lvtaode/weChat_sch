@@ -1,0 +1,35 @@
+<!--pages/jobPublish/list.wxml-->
+<view class='job_list'>
+    <view class='item'  wx:for="{{list}}" wx:key="{{item}}">
+        <view class='left_content' style="width:50%">
+            <text style='color:#3283B0;font-size:38rpx;'>
+              {{item.name}}
+            </text>
+            <text>
+               求职岗位:{{item.profession}}
+            </text>
+            <text>
+               电 话:{{item.phone}}
+            </text>
+        </view>
+        <view class='right_content' style='width:50%'>
+            <text>
+                招聘时间:{{item.create_time}}
+            </text>        
+            <text>
+               岗位薪资:{{item.money1}}-{{item.money2}}
+            </text>
+            <text class='addr'>
+               求职地区:{{item.city_id+item.area_id}}
+            </text>
+        </view>
+        <image  class='shenhe' src='https://www.chinascw.net/public/images/{{item.audit==0?"audit1.png":"jobAudit.png"}}'></image>
+    </view>
+</view>
+<view hidden="{{trigger}}" style='text-align:center;padding:150rpx;background-color:#fff'>
+          您尚未发布招聘信息...
+</view>
+
+<view bindtap='jump'>
+    <button>发 布 信 息</button>
+</view>

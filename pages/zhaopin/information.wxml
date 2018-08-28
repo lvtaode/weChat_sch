@@ -1,0 +1,12 @@
+<!--pages/zhaopin/information.wxml-->
+
+
+<view>
+  <view class='title'>
+    <image src='http://www.chinascw.net/public/images/zp_1.png'></image>
+    新天地石材
+  </view>
+  <view>
+      
+  </view>
+</view>

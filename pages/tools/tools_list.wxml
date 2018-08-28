@@ -1,0 +1,23 @@
+<!--pages/tools/tools_list.wxml-->
+<block wx:for='{{tools_list}}' wx:key="{{tools_list}}">
+  <navigator url='/pages/tools/tool_shop?shop_id={{item.shop_id}}&city_id={{item.city_id}}&cate_id=75&area_id={{item.area_id}}&business_id={{item.business_id}}'>
+    <view class='con'>
+        <view class='box'>
+          <view style='width:49%'>
+              <image class='photo' src="http://www.chinascw.net/attachs/{{item.photo}}"></image>
+          </view>
+          <view style='width:48%'>
+              <text style='font-size:32rpx; font-weight:bold'>{{item.shop_name}}</text>
+              <text class='main'>主营产品 : {{item.gname}}</text>
+              <navigator url='/pages/tools/tool_shop'>
+                  <text style="float:right;color:#3886B1;">查看更多 >></text>
+              </navigator>
+          </view>
+        </view>
+        <view class='bottom'>
+        <image style='width:25rpx;height:38rpx;vertical-align:middle;' src='http://www.chinascw.net/themes/default/Mobile/statics/img/1s.png'></image>
+        地址:{{item.addr}}
+        </view>
+    </view>
+  </navigator>
+</block>
